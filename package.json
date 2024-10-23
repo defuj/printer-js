@@ -1,8 +1,11 @@
 {
-  "name": "bluetooth-print-js",
+  "name": "@defuj/bluetooth-print-js",
   "version": "1.0.1",
   "description": "A javascript plugin for Bluetooth printers.",
   "main": "index.js",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
