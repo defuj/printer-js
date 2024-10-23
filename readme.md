@@ -23,7 +23,7 @@ Gunakan metode `connectToPrint` untuk menghubungkan ke printer Bluetooth dan men
 
 1. Tambahkan file printer.js ke dalam proyek Anda.
    ```html
-   <script src="https://defuj.github.io/printer-js/printer.obf.min.js"></script>
+   <script src="https://defuj.github.io/printer-js/index.js"></script>
    ```
 2. Buat instance dari PrintPlugin dengan ukuran kertas yang diinginkan.
    ```javascript
@@ -57,7 +57,7 @@ Gunakan metode `connectToPrint` untuk menghubungkan ke printer Bluetooth dan men
     <button id="connect">Connect and Print</button>
     <p id="status"></p>
 
-    <script src="path/to/printer.js"></script>
+    <script src="https://defuj.github.io/printer-js/index.js"></script>
     <script>
       document.getElementById("connect").addEventListener("click", () => {
         let printer = new PrintPlugin("80mm");
