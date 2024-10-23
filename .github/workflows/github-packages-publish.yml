@@ -14,11 +14,19 @@ jobs:
       contents: read
       packages: write
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
           node-version: "14"
           registry-url: https://npm.pkg.github.com/
-      - run: npm publish
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Publish to Github Package Registry
+        run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GIT_TOKEN}}
