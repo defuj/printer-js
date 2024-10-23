@@ -1,0 +1,30 @@
+{
+  "name": "print-js",
+  "version": "1.0.0",
+  "description": "A javascript plugin for Bluetooth printers.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/defuj/printer-js.git"
+  },
+  "keywords": [
+    "javascript",
+    "print",
+    "printer-thermal",
+    "bluetooth",
+    "printer-thermal-bluetooth",
+    "print-receipt",
+    "print-bill",
+    "print-invoice",
+    "html"
+  ],
+  "author": "Dede Fuji Abdul",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/defuj/printer-js/issues"
+  },
+  "homepage": "https://github.com/defuj/printer-js#readme"
+}
