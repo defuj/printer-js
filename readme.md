@@ -19,7 +19,30 @@ Gunakan metode `connectToPrint` untuk menghubungkan ke printer Bluetooth dan men
 - `onReady`: Dipanggil ketika koneksi ke printer berhasil. Anda dapat menggunakan objek print yang diteruskan ke callback ini untuk mencetak teks.
 - `onFailed`: Dipanggil ketika koneksi ke printer gagal. Anda dapat menggunakan parameter message untuk mendapatkan pesan error.
 
-Contoh penggunaan:
+### Cara Menggunakan PrintPlugin
+
+1. Tambahkan file printer.js ke dalam proyek Anda.
+   ```html
+   <script src="https://defuj.github.io/printer-js/printer.obf.min.js"></script>
+   ```
+2. Buat instance dari PrintPlugin dengan ukuran kertas yang diinginkan.
+   ```javascript
+   let printer = new PrintPlugin("80mm");
+   ```
+3. Hubungkan ke printer dan cetak teks.
+
+   ```javascript
+   printer.connectToPrint({
+     onReady: async (print) => {
+       await print.writeText("Hello, World!");
+     },
+     onFailed: (message) => {
+       console.log(message);
+     },
+   });
+   ```
+
+4. Contoh penggunaan:
 
 ```html
 <!DOCTYPE html>
