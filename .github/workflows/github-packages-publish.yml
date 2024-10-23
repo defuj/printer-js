@@ -26,6 +26,9 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Authenticate with GitHub package registry
+        run: npm login --registry=https://npm.pkg.github.com/ --scope=@${{ github.repository_owner }} --always-auth --authToken ${{secrets.GIT_TOKEN}}
+
       - name: Publish to Github Package Registry
         run: npm publish
         env:
