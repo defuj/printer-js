@@ -2,3 +2,4 @@ index.html
 printer.js
 printer.min.js
 .gitignore
+package.json
