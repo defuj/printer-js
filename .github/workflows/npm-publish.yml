@@ -23,7 +23,20 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Check publishConfig registry
+        id: check_registry
+        run: |
+          REGISTRY_URL=$(jq -r '.publishConfig.registry' package.json)
+          echo "Registry URL: $REGISTRY_URL"
+          if [[ "$REGISTRY_URL" != "https://registry.npmjs.org/" ]]; then
+            echo "Registry URL is not valid. Skipping publish."
+            echo "should_publish=false" >> $GITHUB_ENV
+          else
+            echo "should_publish=true" >> $GITHUB_ENV
+          fi
+
       - name: Publish to npm
+        if: env.should_publish == 'true'
         run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.npm_token }}
