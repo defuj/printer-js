@@ -1,5 +1,5 @@
 {
-  "name": "print-js",
+  "name": "bluetooth-print-js",
   "version": "1.0.0",
   "description": "A javascript plugin for Bluetooth printers.",
   "main": "index.js",
