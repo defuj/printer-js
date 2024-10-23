@@ -4,13 +4,49 @@ PrintPlugin adalah plugin JavaScript untuk mencetak teks menggunakan printer Blu
 
 ## Instalasi
 
-Tambahkan file printer.js ke dalam proyek Anda dan sertakan dalam file HTML Anda:
+### Menggunakan NPM
+
+```bash
+npm install bluetooth-print-js
+```
+
+import atau require PrintPlugin ke dalam proyek Anda.
+
+```javascript
+import PrintPlugin from "bluetooth-print-js";
+```
+
+or
+
+```javascript
+const PrintPlugin = require("bluetooth-print-js");
+```
+
+### Menggunakan CDN
+
+```html
+<script src="https://cdn.jsdelivr.net/npm/bluetooth-print-js@1.0/index.min.js"></script>
+```
 
 ## Penggunaan
 
 ### Membuat Instance dari PrintPlugin
 
-Anda dapat membuat instance dari PrintPlugin dengan menentukan ukuran kertas yang diinginkan. Ukuran kertas yang didukung adalah "58mm" dan "80mm".
+Anda dapat membuat instance dari PrintPlugin dengan atau tanpa menentukan ukuran kertas yang diinginkan. Ukuran kertas yang didukung adalah "58mm" dan "80mm". Jika ukuran kertas tidak ditentukan, ukuran kertas default adalah "58mm".
+
+```javascript
+// Create instance with paper size "80mm"
+let printer = new PrintPlugin("80mm");
+
+// Create instance with default paper size "58mm"
+let printer = new PrintPlugin();
+```
+
+or
+
+```javascript
+let printer = new PrintPlugin();
+```
 
 ### Menghubungkan ke Printer dan Mencetak Teks
 
@@ -21,15 +57,7 @@ Gunakan metode `connectToPrint` untuk menghubungkan ke printer Bluetooth dan men
 
 ### Cara Menggunakan PrintPlugin
 
-1. Tambahkan file printer.js ke dalam proyek Anda.
-   ```html
-   <script src="https://cdn.jsdelivr.net/npm/bluetooth-print-js@1.0/index.min.js"></script>
-   ```
-2. Buat instance dari PrintPlugin dengan ukuran kertas yang diinginkan.
-   ```javascript
-   let printer = new PrintPlugin("80mm");
-   ```
-3. Hubungkan ke printer dan cetak teks.
+1. Hubungkan ke printer dan cetak teks.
 
    ```javascript
    printer.connectToPrint({
@@ -42,7 +70,7 @@ Gunakan metode `connectToPrint` untuk menghubungkan ke printer Bluetooth dan men
    });
    ```
 
-4. Contoh penggunaan:
+2. Contoh penggunaan lengkap (HTML):
 
 ```html
 <!DOCTYPE html>
