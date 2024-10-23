@@ -1,5 +1,8 @@
 # PrintPlugin
 
+[![npm version](https://badge.fury.io/js/bluetooth-print-js.svg)](https://badge.fury.io/js/bluetooth-print-js)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 PrintPlugin adalah plugin JavaScript untuk mencetak teks menggunakan printer thermal Bluetooth. Plugin ini mendukung dua ukuran kertas: "58mm" dan "80mm".
 
 ## Fitur
