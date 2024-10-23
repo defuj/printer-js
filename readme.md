@@ -37,14 +37,12 @@ Anda dapat membuat instance dari PrintPlugin dengan atau tanpa menentukan ukuran
 ```javascript
 // Create instance with paper size "80mm"
 let printer = new PrintPlugin("80mm");
-
-// Create instance with default paper size "58mm"
-let printer = new PrintPlugin();
 ```
 
 or
 
 ```javascript
+// Create instance with default paper size "58mm"
 let printer = new PrintPlugin();
 ```
 
