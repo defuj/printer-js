@@ -3,3 +3,4 @@ printer.js
 printer.min.js
 .gitignore
 package.json
+package-lock.json
