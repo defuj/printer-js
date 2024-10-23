@@ -1,6 +1,20 @@
 # PrintPlugin
 
-PrintPlugin adalah plugin JavaScript untuk mencetak teks menggunakan printer Bluetooth. Plugin ini mendukung dua ukuran kertas: "58mm" dan "80mm".
+PrintPlugin adalah plugin JavaScript untuk mencetak teks menggunakan printer thermal Bluetooth. Plugin ini mendukung dua ukuran kertas: "58mm" dan "80mm".
+
+## Fitur
+
+1. Mencetak teks dengan berbagai opsi seperti huruf tebal, garis bawah, perataan, dan ukuran teks.
+2. Mencetak teks dengan dua kolom.
+3. Mencetak garis putus-putus.
+4. Mencetak baris baru.
+5. Mendukung dua ukuran kertas: "58mm" dan "80mm".
+6. Mendukung koneksi ke printer thermal Bluetooth.
+7. Mendukung browser modern seperti Chrome, Firefox, dan Edge.
+8. Mendukung Node.js.
+9. Mendukung penggunaan CDN.
+10. Mendukung penggunaan NPM.
+11. Mendukung penggunaan ES6.
 
 ## Instalasi
 
